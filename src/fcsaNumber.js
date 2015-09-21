@@ -118,7 +118,7 @@
             noCommasVal = viewVal.replace(/,/g, '');
             if (isValid(noCommasVal) || !noCommasVal) {
               ngModelCtrl.$setValidity('fcsaNumber', true);
-              return noCommasVal;
+              return parseFloat(noCommasVal);
             } else {
               ngModelCtrl.$setValidity('fcsaNumber', false);
               return void 0;
